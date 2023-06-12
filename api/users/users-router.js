@@ -1,4 +1,7 @@
 const express = require('express');
+const mw = require("../middleware/middleware")
+const userModel = require("./users-model");
+const postModel = require("../posts/posts-model")
 
 // `users-model.js` ve `posts-model.js` sayfalarına ihtiyacınız var
 // ara yazılım fonksiyonları da gereklidir
@@ -42,3 +45,5 @@ router.post('/:id/posts', (req, res) => {
 });
 
 // routerı dışa aktarmayı unutmayın
+
+module.exports = router
